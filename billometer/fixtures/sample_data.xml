@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+  <object pk="1" model="billometer.project">
+    <field type="CharField" name="name">Project 1</field>
+    <field type="CharField" name="openstack_tenant"></field>
+  </object>
+  <object pk="2" model="billometer.project">
+    <field type="CharField" name="name">Project 2</field>
+    <field type="CharField" name="openstack_tenant"><None></None></field>
+  </object>
+  <object pk="3" model="billometer.project">
+    <field type="CharField" name="name">Project 3</field>
+    <field type="CharField" name="openstack_tenant"><None></None></field>
+  </object>
+  <object pk="1" model="billometer.resourcetype">
+    <field type="CharField" name="name">m1.micro</field>
+    <field to="billometer.project" name="project" rel="ManyToOneRel">1</field>
+    <field type="CharField" name="resource">nova.instance</field>
+    <field type="TextField" name="ceilometer_query"></field>
+    <field type="DecimalField" name="default_price">1.000</field>
+    <field type="DecimalField" name="default_threshold">0.000</field>
+  </object>
+  <object pk="2" model="billometer.resourcetype">
+    <field type="CharField" name="name">m1.small</field>
+    <field to="billometer.project" name="project" rel="ManyToOneRel">1</field>
+    <field type="CharField" name="resource">nova.instance</field>
+    <field type="TextField" name="ceilometer_query"></field>
+    <field type="DecimalField" name="default_price">1.000</field>
+    <field type="DecimalField" name="default_threshold">0.000</field>
+  </object>
+  <object pk="3" model="billometer.resourcetype">
+    <field type="CharField" name="name">network</field>
+    <field to="billometer.project" name="project" rel="ManyToOneRel">1</field>
+    <field type="CharField" name="resource">neutron.network</field>
+    <field type="TextField" name="ceilometer_query"></field>
+    <field type="DecimalField" name="default_price">1.000</field>
+    <field type="DecimalField" name="default_threshold">0.000</field>
+  </object>
+  <object pk="1" model="auth.user">
+    <field type="CharField" name="password">pbkdf2_sha256$10000$FqwPHCkoTmw2$tkwhFCHXXLRMXadQWlvcGbPUGY2LTEmaxvQQr3/IVTo=</field>
+    <field type="DateTimeField" name="last_login">2014-01-16T14:35:33</field>
+    <field type="BooleanField" name="is_superuser">True</field>
+    <field type="CharField" name="username">root</field>
+    <field type="CharField" name="first_name"></field>
+    <field type="CharField" name="last_name"></field>
+    <field type="CharField" name="email"></field>
+    <field type="BooleanField" name="is_staff">True</field>
+    <field type="BooleanField" name="is_active">True</field>
+    <field type="DateTimeField" name="date_joined">2014-01-16T14:35:33</field>
+    <field to="auth.group" name="groups" rel="ManyToManyRel"></field>
+    <field to="auth.permission" name="user_permissions" rel="ManyToManyRel"></field>
+  </object>
+</django-objects>

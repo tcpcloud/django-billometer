@@ -1,0 +1,16 @@
+Source: billometer
+Maintainer: Filip Pytloun <filip.pytloun@tcpcloud.eu>
+# For python modules, it should be python
+# Section: python
+# But for complete django projects, use web
+Section: web
+Priority: optional
+Build-Depends: debhelper (>= 9), python, python-dev, python-virtualenv, dh-virtualenv (>= 0.9), dh-python, python-setuptools, libpq-dev, libyaml-dev
+Standards-Version: 3.9.1
+X-Python-Version: >= 2.7
+
+Package: billometer
+Architecture: any
+Pre-Depends: dpkg (>= 1.16.1), python, python-yaml, ${misc:Pre-Depends}, debconf, libpq5, python-dev
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Simple Django based Helpdesk with API

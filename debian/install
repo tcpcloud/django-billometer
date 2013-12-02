@@ -1,0 +1,3 @@
+bin/manage.py     usr/lib/billometer/bin/
+bin/gunicorn_start.sh     usr/lib/billometer/bin/
+#templates/*   usr/share/billometer/templates

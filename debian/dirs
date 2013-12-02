@@ -1,0 +1,5 @@
+usr/lib/billometer
+var/log/billometer
+var/lib/billometer/static
+var/lib/billometer/media
+etc/billometer/templates

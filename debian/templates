@@ -1,0 +1,44 @@
+Template: billometer/user
+Type: string
+Description: System user to run with
+Default: billometer
+
+Template: billometer/group
+Type: string
+Description: System group to run with
+Default: billometer
+
+Template: billometer/debug
+Type: boolean
+Description: Enable debug
+Default: false
+
+Template: billometer/bind_host
+Type: string
+Description: Bind host
+Default: 0.0.0.0
+
+Template: billometer/bind_port
+Type: string
+Description: Bind port
+Default: 9753
+
+Template: billometer/workers
+Type: string
+Description: Number of workers, eg. for gunicorn. Defaults to number of CPUs
+
+Template: billometer/log_level
+Type: select
+Description: Log level of gunicorn process
+Choices: debug, info, warning, error, critical
+Default: info
+
+Template: billometer/static_root
+Type: string
+Description: Path to static files
+Default: /var/lib/billometer/static
+
+Template: billometer/media_root
+Type: string
+Description: Path to media files
+Default: /var/lib/billometer/media
